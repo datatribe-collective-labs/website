@@ -76,8 +76,8 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
-            </div>
+                <button class="btn btn-primary nav-cta" onclick="openJoinForm()">Join Now</button>
+                            </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -94,11 +94,11 @@
                 <h1 id="hero-title">Would you like to become a mentor?</h1>
                 <p>Share your expertise and help shape the next generation of data professionals. Join our mentorship program and make a lasting impact in the community.</p>
                 <div class="hero-actions">
-                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn-primary btn-lg" target="_blank" rel="noopener" aria-describedby="mentor-description">Get Started</a>
+                    <button class="btn btn-primary btn-lg" onclick="openJoinForm()" aria-describedby="mentor-description">Get Started</button>
                     <a href="#why-mentor" class="btn btn-secondary btn-lg">Learn More</a>
-                </div>
+                        </div>
                 <div id="mentor-description" class="sr-only">Fill out our mentor application form to get started</div>
-            </div>
+                                    </div>
         </section>
 
     <!-- Why Mentor Section -->
@@ -109,7 +109,7 @@
                 <p class="section-description">
                     Mentoring is a rewarding experience that benefits both you and your mentees. Here's why you should consider joining our mentorship program.
                 </p>
-                        </div>
+                                    </div>
 
             <div class="grid grid-cols-3">
                 <div class="card">
@@ -133,12 +133,12 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Develop Leadership Skills</h3>
-                                    </div>
+                            </div>
                     <p class="card-description">
                         Enhance your leadership and communication skills by guiding others. These skills are valuable in any professional setting and can advance your own career.
                     </p>
-                            </div>
                         </div>
+                    </div>
                     </div>
     </section>
 
@@ -248,10 +248,10 @@
                     </div>
                     </div>
 
-                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="width: 100%; text-align: center;">Apply to Mentor</a>
-                </div>
-            </div>
-        </div>
+                    <button class="btn btn-primary btn-lg" onclick="openJoinForm()" style="width: 100%; text-align: center;">Apply to Mentor</button>
+                                </div>
+                            </div>
+                    </div>
     </section>
 
     <!-- Success Stories Section -->
@@ -262,7 +262,7 @@
                 <p class="section-description">
                     Hear from our mentors about their experiences and the impact they've made.
                 </p>
-                                </div>
+                </div>
 
             <div class="grid grid-cols-3">
                 <div class="card">
@@ -304,15 +304,15 @@
             <div class="card cta-card">
                 <div class="card-header">
                     <h2 class="card-title">Ready to Make a Difference?</h2>
-                </div>
+                                        </div>
                 <p class="card-description">
                     Join our community of mentors and help shape the next generation of data professionals. Your expertise can make a lasting impact.
                 </p>
                 <div class="cta-actions">
-                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Apply to Mentor</a>
-                </div>
-            </div>
-                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="openJoinForm()">Apply to Mentor</button>
+                                </div>
+                            </div>
+                        </div>
             </section>
     </main>
 
@@ -330,8 +330,8 @@
                             </svg>
                         </a>
                     </div>
-                </div>
-                
+                        </div>
+
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <p><a href="#about">About Us</a></p>
@@ -339,7 +339,7 @@
                     <p><a href="events.html">Events</a></p>
                     <p><a href="mentors.html">Mentorship</a></p>
                     <p><a href="partners.html">Partnerships</a></p>
-                </div>
+                    </div>
                 
                 <div class="footer-section">
                     <h3>Stay Updated</h3>
@@ -348,13 +348,13 @@
                         <input type="email" placeholder="Enter your email address" required aria-label="Email address" style="min-width: 250px;">
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
+                    </div>
                 </div>
-            </div>
             
             <div class="footer-bottom">
                 <p>&copy; 2025 DataTribe Collective. All rights reserved. <a href="/code-of-conduct">Code of Conduct</a> | Built with ❤️ for the data community.</p>
-            </div>
-        </div>
+                            </div>
+                    </div>
     </footer>
 
     <!-- Join Form Modal -->
@@ -366,7 +366,7 @@
                 <button class="modal-close" onclick="closeJoinForm()" aria-label="Close modal">
                     <span>&times;</span>
                 </button>
-            </div>
+                </div>
             <div class="modal-body">
                 <p class="modal-description">
                     Tell us about yourself so we can connect you with the right opportunities, events, and people in our community.
@@ -381,7 +381,7 @@
                         <label for="email" class="form-label">Email Address *</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="experience" class="form-label">Experience Level *</label>
                         <select id="experience" name="experience" class="form-select" required>
@@ -391,8 +391,8 @@
                             <option value="advanced">Advanced (3-5 years)</option>
                             <option value="expert">Expert (5+ years)</option>
                         </select>
-                    </div>
-                    
+                </div>
+
                     <div class="form-group">
                         <label for="interests" class="form-label">Areas of Interest</label>
                         <div class="checkbox-group">
@@ -420,29 +420,29 @@
                                 <input type="checkbox" name="interests" value="mentoring">
                                 <span>Mentoring</span>
                             </label>
-                        </div>
-                    </div>
+                </div>
+            </div>
                     
                     <div class="form-group">
                         <label for="goals" class="form-label">What are your goals?</label>
                         <textarea id="goals" name="goals" class="form-textarea" rows="3" placeholder="Tell us about your career goals and what you hope to achieve..."></textarea>
-                    </div>
-                    
+                        </div>
+
                     <div class="form-group">
                         <label class="checkbox-label">
                             <input type="checkbox" name="newsletter" value="yes">
                             <span>Subscribe to our newsletter for updates and events</span>
                         </label>
-                    </div>
-                    
+                        </div>
+
                     <div class="form-actions">
                         <button type="button" class="btn btn-secondary" onclick="closeJoinForm()">Cancel</button>
                         <button type="submit" class="btn btn-primary">Join Community</button>
-                    </div>
+                        </div>
                 </form>
-            </div>
-        </div>
-    </div>
+                                    </div>
+                        </div>
+                </div>
 
     <!-- Screen Reader Only -->
     <div class="sr-only" aria-live="polite" aria-atomic="true"></div>
