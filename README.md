@@ -169,7 +169,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🎯 Community Stats
 
-- **1,986+ Community Members**
+- **2000+ Community Members**
 - **30+ Projects Completed**
 - **4 Student Internships**
 - **11 In-Person Events**

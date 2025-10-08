@@ -14,13 +14,13 @@
         h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.2;margin-bottom:var(--space-4)}h1{font-size:clamp(2rem,5vw,3rem)}h2{font-size:clamp(1.5rem,4vw,2.25rem)}h3{font-size:var(--text-xl)}p{margin-bottom:var(--space-4)}a{color:var(--primary);text-decoration:none}a:focus{outline:2px solid var(--primary);outline-offset:2px}
         .container{max-width:1200px;margin:0 auto;padding:0 var(--space-4)}.grid{display:grid;gap:var(--space-6)}.grid-cols-1{grid-template-columns:1fr}.grid-cols-2{grid-template-columns:repeat(2,1fr)}.grid-cols-3{grid-template-columns:repeat(3,1fr)}
         .header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);z-index:var(--z-fixed);padding:var(--space-4) 0}.nav{display:flex;align-items:center;justify-content:space-between}.logo{font-size:var(--text-xl);font-weight:800;color:var(--primary)}.nav-menu{display:flex;gap:var(--space-6);list-style:none}.nav-link{padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);transition:var(--transition)}.nav-link:hover,.nav-link:focus{background:var(--gray-100)}.nav-toggle{display:none;background:none;border:none;font-size:var(--text-xl);cursor:pointer;padding:var(--space-2);border-radius:var(--radius-md)}
-        .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 80%,rgba(120,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,119,198,0.3) 0%,transparent 50%);pointer-events:none}.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:var(--space-8)}.hero h1{margin-bottom:var(--space-6);text-shadow:0 2px 4px rgba(0,0,0,0.1)}.hero p{font-size:var(--text-lg);margin-bottom:var(--space-8);opacity:0.9}.hero-stats{display:flex;justify-content:center;gap:var(--space-12);margin-bottom:var(--space-8);flex-wrap:wrap}.stat-item{text-align:center;padding:var(--space-4);min-width:200px}.stat-number{font-size:var(--text-5xl);font-weight:800;color:#4a4a4a;text-shadow:1px 1px 2px rgba(255,255,255,0.6),-1px -1px 2px rgba(255,255,255,0.6),1px -1px 2px rgba(255,255,255,0.6),-1px 1px 2px rgba(255,255,255,0.6);margin-bottom:var(--space-2)}.stat-label{font-size:var(--text-lg);font-weight:700;color:#2a2a2a;text-shadow:1px 1px 2px rgba(255,255,255,0.8),-1px -1px 2px rgba(255,255,255,0.8),1px -1px 2px rgba(255,255,255,0.8),-1px 1px 2px rgba(255,255,255,0.8)}.hero-actions{display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;align-items:center}
+        .hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 20% 80%,rgba(120,119,198,0.3) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(255,119,198,0.3) 0%,transparent 50%);pointer-events:none}.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:var(--space-8)}.hero h1{margin-bottom:var(--space-6);text-shadow:0 2px 4px rgba(0,0,0,0.1)}.hero p{font-size:var(--text-lg);margin-bottom:var(--space-8);opacity:0.9}.hero-stats{display:flex;justify-content:center;gap:var(--space-12);margin-bottom:var(--space-8);flex-wrap:wrap}.stat-item{text-align:center;padding:var(--space-4);min-width:200px}.stat-number{font-size:var(--text-5xl);font-weight:900;color:#ffffff;text-shadow:3px 3px 6px rgba(0,0,0,1),-3px -3px 6px rgba(0,0,0,1),3px -3px 6px rgba(0,0,0,1),-3px 3px 6px rgba(0,0,0,1),0 0 10px rgba(0,0,0,0.8);margin-bottom:var(--space-2)}.hero .stat-label{font-size:var(--text-base);font-weight:600;color:#ffffff!important;text-shadow:1px 1px 2px rgba(0,0,0,0.5)!important;letter-spacing:0.1px;text-transform:uppercase}.hero-actions{display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;align-items:center}
         .section{padding:var(--space-24) 0}.section-header{text-align:center;margin-bottom:var(--space-16);max-width:800px;margin-left:auto;margin-right:auto}.section-title{margin-bottom:var(--space-6);background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.section-description{font-size:var(--text-lg);color:var(--text-secondary);max-width:600px;margin:0 auto}
         .card{background:var(--white);border-radius:var(--radius-2xl);padding:var(--space-8);box-shadow:var(--shadow-lg);border:1px solid var(--border-color);transition:var(--transition);height:100%;display:flex;flex-direction:column}.card:hover{box-shadow:var(--shadow-xl);transform:translateY(-4px)}.card-header{margin-bottom:var(--space-4)}.card-title{font-size:var(--text-xl);margin-bottom:var(--space-2)}.card-description{color:var(--text-secondary);flex-grow:1}.card-icon{font-size:var(--text-4xl);margin-bottom:var(--space-4);display:block}
         .btn{display:inline-flex;align-items:center;justify-content:center;padding:var(--space-3) var(--space-6);border-radius:var(--radius-lg);font-weight:600;text-decoration:none;transition:var(--transition);border:none;cursor:pointer;font-size:var(--text-base);min-height:44px}.btn-primary{background:var(--primary);color:white;box-shadow:var(--shadow-md)}.btn-primary:hover,.btn-primary:focus{background:var(--primary-dark);box-shadow:var(--shadow-lg);transform:translateY(-1px)}.btn-secondary{background:transparent;color:var(--primary);border:2px solid var(--primary)}.btn-secondary:hover,.btn-secondary:focus{background:var(--primary);color:white}.btn-lg{padding:var(--space-4) var(--space-8);font-size:var(--text-lg)}
         .event-card{background:var(--white);border-radius:var(--radius-2xl);overflow:hidden;box-shadow:var(--shadow-lg);transition:var(--transition);height:100%;display:flex;flex-direction:column}.event-card:hover{box-shadow:var(--shadow-xl);transform:translateY(-4px)}.event-image{width:100%;height:200px;object-fit:cover}.event-content{padding:var(--space-6);flex-grow:1;display:flex;flex-direction:column}.event-date{color:var(--primary);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-2)}.event-title{font-size:var(--text-xl);margin-bottom:var(--space-3)}.event-description{color:var(--text-secondary);margin-bottom:var(--space-4);flex-grow:1}.event-details{background:var(--gray-50);padding:var(--space-4);border-radius:var(--radius-lg);margin-bottom:var(--space-4)}.event-detail-item{margin-bottom:var(--space-2);font-size:var(--text-sm)}.event-detail-item:last-child{margin-bottom:0}
         .footer{background:var(--gray-900);color:white;padding:var(--space-16) 0 var(--space-8)}.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:var(--space-8);margin-bottom:var(--space-8)}.footer-section h3{color:white;margin-bottom:var(--space-4)}.footer-section p,.footer-section a{color:var(--gray-300);margin-bottom:var(--space-2)}.footer-section a:hover{color:white}.newsletter-form{display:flex;gap:var(--space-2);margin-top:var(--space-4)}.newsletter-form input{flex:1;padding:var(--space-3);border:1px solid var(--gray-600);border-radius:var(--radius-md);background:var(--gray-800);color:white;font-size:16px}.newsletter-form input::placeholder{color:var(--gray-400)}.footer-bottom{text-align:center;padding-top:var(--space-8);border-top:1px solid var(--gray-700);color:var(--gray-400)}
-        .team-section{width:100%;overflow:hidden}.founder-section{margin-bottom:var(--space-8)}.founder-card{background:var(--white);border-radius:var(--radius-2xl);padding:var(--space-6);box-shadow:var(--shadow-lg);border:1px solid var(--border-color);display:flex;align-items:center;gap:var(--space-4);width:100%;max-width:100%}.founder-avatar{font-size:3rem;flex-shrink:0}.founder-info{flex:1;min-width:0}.founder-name{font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-2);color:var(--text-primary)}.founder-role{color:var(--primary);font-weight:600;margin-bottom:var(--space-3)}.founder-bio{color:var(--text-secondary);line-height:1.5;font-size:var(--text-sm)}.core-team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:var(--space-4);margin-bottom:var(--space-6);width:100%}.team-member{text-align:center;padding:var(--space-3);background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}.member-avatar{font-size:2rem;margin-bottom:var(--space-2)}.member-name{font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-1);color:var(--text-primary)}.member-role{color:var(--text-secondary);font-size:var(--text-sm)}.volunteers-section{background:var(--gray-50);border-radius:var(--radius-xl);padding:var(--space-4);width:100%}.volunteers-title{font-size:var(--text-base);font-weight:600;margin-bottom:var(--space-3);color:var(--text-primary);text-align:center}.volunteers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--space-2)}.volunteer-item{background:var(--white);padding:var(--space-2);border-radius:var(--radius-md);text-align:center;font-weight:500;color:var(--text-primary);box-shadow:var(--shadow-sm);font-size:var(--text-sm)}@media (max-width:768px){.nav-menu{position:fixed;top:100%;left:0;right:0;background:white;flex-direction:column;padding:var(--space-4);box-shadow:var(--shadow-lg);transform:translateY(-100%);transition:transform var(--transition)}.nav-menu.active{transform:translateY(0)}.nav-toggle{display:block}.grid-cols-2,.grid-cols-3{grid-template-columns:1fr}.hero-actions{flex-direction:column;align-items:center}.hero-content{padding:var(--space-6)}.section{padding:var(--space-16) 0}.card{padding:var(--space-6)}.newsletter-form{flex-direction:column}.founder-card{flex-direction:column;text-align:center}.core-team-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.volunteers-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}}
+@media (max-width:768px){.nav-menu{position:fixed;top:100%;left:0;right:0;background:white;flex-direction:column;padding:var(--space-4);box-shadow:var(--shadow-lg);transform:translateY(-100%);transition:transform var(--transition)}.nav-menu.active{transform:translateY(0)}.nav-toggle{display:block}.grid-cols-2,.grid-cols-3{grid-template-columns:1fr}.hero-actions{flex-direction:column;align-items:center}.hero-content{padding:var(--space-6)}.section{padding:var(--space-16) 0}.card{padding:var(--space-6)}.newsletter-form{flex-direction:column}.founder-card{flex-direction:column;text-align:center}.core-team-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.volunteers-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}}
             </style>
     
     <!-- Preload critical resources -->
@@ -66,7 +66,7 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <button class="btn btn-primary nav-cta" onclick="openJoinForm()">Join Now</button>
+                <a href="#" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
                                     </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
@@ -82,10 +82,10 @@
         <section class="hero" id="hero" aria-labelledby="hero-title">
             <div class="hero-content">
                 <h1 id="hero-title" style="margin-top: 4rem;">Launch Your Data Career Today</h1>
-                <p>Join 1,986+ data professionals building verifiable portfolios through real company projects.</p>
+                <p>Join 2000+ data professionals building verifiable portfolios through real company projects.</p>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">1,986</div>
+                        <div class="stat-number">2000+</div>
                         <div class="stat-label">Community Members</div>
                     </div>
                     <div class="stat-item">
@@ -94,18 +94,19 @@
                     </div>
                 </div>
                 <div class="hero-actions">
-                    <button class="btn btn-primary btn-lg" onclick="openJoinForm()" aria-describedby="discord-description">Start Your Data Career</button>
-                    <a href="#success-stories" class="btn btn-secondary btn-lg">See Success Stories</a>
+                    <a href="#" class="btn btn-primary btn-lg" target="_blank" rel="noopener" aria-describedby="discord-description">Join Community</a>
+                    <a href="#success-stories" class="btn btn-secondary btn-lg">Success Stories</a>
                     </div>
                 <div id="discord-description" class="sr-only">Join our Discord community to connect with other data professionals</div>
                         </div>
         </section>
 
-        <!-- Logo Belt Section -->
+        <!-- Trusted Partners Section -->
         <section class="logo-belt-section">
             <div class="container">
                 <div class="logo-belt-header">
                     <h3>Trusted by leading organizations</h3>
+                    <p style="margin-top: var(--space-4); color: var(--text-secondary); font-size: var(--text-base); max-width: 600px; margin-left: auto; margin-right: auto;">We work with companies across industries to deliver real-world data solutions</p>
                 </div>
                 <div class="logo-belt">
                     <!-- First set of logos -->
@@ -261,11 +262,22 @@
                     <!-- Founder Section -->
                     <div class="founder-section">
                         <div class="founder-card">
-                            <div class="founder-avatar">👩‍💼</div>
+                            <div class="founder-photo" style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+                                <img src="https://via.placeholder.com/150x150/667eea/ffffff?text=EV" alt="Eevamaija Virtanen" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
                             <div class="founder-info">
                                 <h4 class="founder-name">Eevamaija Virtanen</h4>
-                                <p class="founder-role">Founder & CEO</p>
-                                <p class="founder-bio">Co-founder & Lead Data Engineer at Invinite, Founder of Helsinki Data Week, Board Member at Tivia ry. Recognized as one of 50 most influential female leaders in Finland's tech scene (2025).</p>
+                                <p class="founder-role">Founder & CEO at DataTribe Collective</p>
+                                <div class="founder-bio">
+                                    <ul style="margin: 0; padding-left: 1.5rem; text-align: left;">
+                                        <li>Co-founder & Lead Data Engineer at <strong>Invinite</strong></li>
+                                        <li>Founder of <strong>Helsinki Data Week</strong></li>
+                                        <li><strong>Tivi Magazine & Johtoryhmä-klubi:</strong> 50 most influential female leaders in Finland's tech scene, 2025</li>
+                                        <li><strong>Hyperight:</strong> Featured in Hyperight Nordic 100 in Data, Analytics & AI, 2025</li>
+                                        <li><strong>Nordic Women in Tech Awards:</strong> Nominee for Social Impact award, 2025</li>
+                                        <li><strong>Favikon:</strong> #1 voice on LinkedIn in Finland's Data Science, 2025</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -273,27 +285,43 @@
                     <!-- Core Team Grid -->
                     <div class="core-team-grid">
                         <div class="team-member">
-                            <div class="member-avatar">👨‍💻</div>
+                            <div class="member-photo" style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                                <img src="https://via.placeholder.com/120x120/667eea/ffffff?text=CP" alt="Chanukya Pekala" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
                             <h4 class="member-name">Chanukya Pekala</h4>
                             <p class="member-role">Tech Lead</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="member-avatar">👩‍🎨</div>
-                            <h4 class="member-name">Eveliina Hampus</h4>
-                            <p class="member-role">Content Coordinator</p>
+                            <div class="member-photo" style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                                <img src="https://via.placeholder.com/120x120/667eea/ffffff?text=VK" alt="Vaida Kavaliukaitė-Kaijanmäki" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
+                            <h4 class="member-name">Vaida Kavaliukaitė-Kaijanmäki</h4>
+                            <p class="member-role">Operations & Partnerships</p>
                         </div>
                         
                         <div class="team-member">
-                            <div class="member-avatar">👩‍💼</div>
-                            <h4 class="member-name">Roosa Savolainen</h4>
-                            <p class="member-role">Project Manager</p>
-                        </div>
-                        
-                        <div class="team-member">
-                            <div class="member-avatar">👩‍🎪</div>
+                            <div class="member-photo" style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                                <img src="https://via.placeholder.com/120x120/667eea/ffffff?text=EG" alt="Elvira Gizatullina" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
                             <h4 class="member-name">Elvira Gizatullina</h4>
                             <p class="member-role">Events Manager</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo" style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                                <img src="https://via.placeholder.com/120x120/667eea/ffffff?text=RS" alt="Roosa Savolainen" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
+                            <h4 class="member-name">Roosa Savolainen</h4>
+                            <p class="member-role">Project Manager, Learning & Mentorships</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo" style="display: flex; justify-content: center; margin-bottom: 1rem;">
+                                <img src="https://via.placeholder.com/120x120/667eea/ffffff?text=JB" alt="Julia Bondarchik" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center; display: block; border: 3px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            </div>
+                            <h4 class="member-name">Julia Bondarchik</h4>
+                            <p class="member-role">Product Manager</p>
                         </div>
                     </div>
 
@@ -301,10 +329,10 @@
                     <div class="volunteers-section">
                         <h4 class="volunteers-title">Operations Volunteers</h4>
                         <div class="volunteers-grid">
+                            <div class="volunteer-item">Patrick Da Silva - Meetups</div>
+                            <div class="volunteer-item">Pauline Hetz - Social Media</div>
                             <div class="volunteer-item">Jason Edwards</div>
-                            <div class="volunteer-item">Patrick Da Silva</div>
                             <div class="volunteer-item">Babak Firoozi Fooladi</div>
-                            <div class="volunteer-item">Vaida Kavaliukaitė-Kaijanmäki</div>
                         </div>
                     </div>
                 </div>
@@ -438,31 +466,6 @@
         </section>
 
 
-        <!-- Join Community Section -->
-        <section class="section" id="join-community" aria-labelledby="join-community-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="join-community-title" class="section-title">Join Our Community</h2>
-                    <p class="section-description">
-                        Help us serve you better by sharing your background, interests, and goals. This information helps us tailor events, match mentors, and create relevant content for our community.
-                    </p>
-                        </div>
-
-                <div class="grid grid-cols-1">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-icon" aria-hidden="true">📝</div>
-                            <h3 class="card-title">Tell Us About Yourself</h3>
-                        </div>
-                        <p class="card-description">
-                            Share your experience level, interests, and career goals. This helps us connect you with the right opportunities, events, and people in our community.
-                        </p>
-                        <div class="card-actions">
-                            <button class="btn btn-primary" onclick="openJoinForm()">Complete Profile</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
         <!-- CTA Section -->
         <section class="section" id="cta" aria-labelledby="cta-title">
@@ -472,7 +475,7 @@
                         <h2 id="cta-title" class="card-title">Ready to Build Your Data Career?</h2>
                     </div>
                     <p class="card-description">
-                        Join 1,000+ professionals working on real projects. No credentials required—just proven work that leads to real opportunities.
+                        Join 1,000+ professionals working on real projects.
                     </p>
                     <div class="cta-benefits">
                         <div class="benefit-item">✓ Work on real company projects</div>
@@ -481,7 +484,7 @@
                         <div class="benefit-item">✓ Direct access to hiring companies</div>
                     </div>
                     <div class="cta-actions">
-                        <button class="btn btn-primary btn-lg" onclick="openJoinForm()">Start Your First Project</button>
+                        <a href="#" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
                         <a href="events.html" class="btn btn-secondary btn-lg">Attend Next Event</a>
                 </div>
                             </div>

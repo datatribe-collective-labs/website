@@ -77,7 +77,7 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <button class="btn btn-primary nav-cta" onclick="openJoinForm()">Join Now</button>
+                <a href="#" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
@@ -92,11 +92,11 @@
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h1 id="hero-title">Upcoming Events</h1>
-                <p>Join our community events, workshops, and meetups designed to help you grow as a data professional.</p>
+                <h1 id="hero-title">Events & Meetups</h1>
+                <p>Join our community events, workshops, and meetups designed to help you grow as a data professional. From technical deep-dives to networking sessions.</p>
                 <div class="hero-actions">
-                    <a href="#events" class="btn btn-primary btn-lg">View Events</a>
-                    <a href="https://discord.gg/datatribe" class="btn btn-secondary btn-lg" target="_blank" rel="noopener" aria-describedby="discord-description">Join Community</a>
+                    <a href="#events" class="btn btn-primary btn-lg">Upcoming Events</a>
+                    <a href="#past-events" class="btn btn-secondary btn-lg">Past Events</a>
                 </div>
                 <div id="discord-description" class="sr-only">Join our Discord community to connect with other data professionals</div>
             </div>
@@ -217,29 +217,239 @@
                     Check out recordings and resources from our previous events.
                 </p>
             </div>
-            
-            <div class="grid grid-cols-2">
-                <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="LIVE DataTribe Meetup" class="event-image">
-                    <div class="event-content">
-                        <div class="event-date">January 20, 2025</div>
-                        <h3 class="event-title">LIVE: DataTribe Collective Tech Meetup</h3>
-                        <p class="event-description">
-                            Our first live meetup featuring lightning talks on data engineering, analytics, and machine learning applications.
-                        </p>
-                        <a href="#" class="btn btn-secondary">View Recording</a>
+
+            <!-- Event Growth Chart -->
+            <div class="growth-chart-section">
+                <div class="chart-container">
+                    <h3 class="chart-title">Community Growth Over Time</h3>
+                    <p class="chart-description">See how our community has grown through our events</p>
+                    <div class="chart-wrapper">
+                        <svg class="growth-chart" viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Grid lines -->
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.02" />
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge> 
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            
+                            <!-- Background -->
+                            <rect x="0" y="0" width="900" height="450" fill="#fafbfc" rx="12"/>
+                            
+                            <!-- Grid lines -->
+                            <g class="grid-lines">
+                                <line x1="100" y1="60" x2="100" y2="380" stroke="#e2e8f0" stroke-width="2"/>
+                                <line x1="100" y1="380" x2="800" y2="380" stroke="#e2e8f0" stroke-width="2"/>
+                                <line x1="100" y1="320" x2="800" y2="320" stroke="#f1f5f9" stroke-width="1"/>
+                                <line x1="100" y1="260" x2="800" y2="260" stroke="#f1f5f9" stroke-width="1"/>
+                                <line x1="100" y1="200" x2="800" y2="200" stroke="#f1f5f9" stroke-width="1"/>
+                                <line x1="100" y1="140" x2="800" y2="140" stroke="#f1f5f9" stroke-width="1"/>
+                                <line x1="100" y1="80" x2="800" y2="80" stroke="#f1f5f9" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Y-axis labels -->
+                            <g class="y-labels">
+                                <text x="90" y="385" text-anchor="end" class="axis-label">0</text>
+                                <text x="90" y="325" text-anchor="end" class="axis-label">25</text>
+                                <text x="90" y="265" text-anchor="end" class="axis-label">50</text>
+                                <text x="90" y="205" text-anchor="end" class="axis-label">75</text>
+                                <text x="90" y="145" text-anchor="end" class="axis-label">100</text>
+                                <text x="90" y="85" text-anchor="end" class="axis-label">125</text>
+                            </g>
+                            
+                            <!-- Data points and line -->
+                            <g class="data-line">
+                                <!-- Area under the curve -->
+                                <path d="M 150 360 L 250 320 L 350 330 L 450 240 L 550 120 L 550 380 L 150 380 Z" 
+                                      fill="url(#areaGradient)"/>
+                                
+                                <!-- Main line -->
+                                <path d="M 150 360 L 250 320 L 350 330 L 450 240 L 550 120" 
+                                      stroke="url(#lineGradient)" 
+                                      stroke-width="5" 
+                                      fill="none" 
+                                      stroke-linecap="round" 
+                                      stroke-linejoin="round"
+                                      filter="url(#glow)"/>
+                                
+                                <!-- Data points -->
+                                <circle cx="150" cy="360" r="8" fill="#3B82F6" stroke="white" stroke-width="3"/>
+                                <circle cx="250" cy="320" r="8" fill="#3B82F6" stroke="white" stroke-width="3"/>
+                                <circle cx="350" cy="330" r="8" fill="#3B82F6" stroke="white" stroke-width="3"/>
+                                <circle cx="450" cy="240" r="8" fill="#3B82F6" stroke="white" stroke-width="3"/>
+                                <circle cx="550" cy="120" r="10" fill="#8B5CF6" stroke="white" stroke-width="4"/>
+                            </g>
+                            
+                            <!-- X-axis labels -->
+                            <g class="x-labels">
+                                <text x="150" y="410" text-anchor="middle" class="axis-label">Nov 2024</text>
+                                <text x="250" y="410" text-anchor="middle" class="axis-label">Mar 2025</text>
+                                <text x="350" y="410" text-anchor="middle" class="axis-label">Apr 2025</text>
+                                <text x="450" y="410" text-anchor="middle" class="axis-label">Jun 2025</text>
+                                <text x="550" y="410" text-anchor="middle" class="axis-label">Sep 2025</text>
+                            </g>
+                            
+                            <!-- Data point labels -->
+                            <g class="data-labels">
+                                <text x="150" y="340" text-anchor="middle" class="data-label">38</text>
+                                <text x="250" y="300" text-anchor="middle" class="data-label">72</text>
+                                <text x="350" y="310" text-anchor="middle" class="data-label">65</text>
+                                <text x="450" y="220" text-anchor="middle" class="data-label">101</text>
+                                <text x="550" y="100" text-anchor="middle" class="data-label">125</text>
+                            </g>
+                            
+                            <!-- Chart title overlay -->
+                            <text x="450" y="30" text-anchor="middle" class="chart-title-overlay">Community Growth Over Time</text>
+                        </svg>
+                    </div>
+                    <div class="chart-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">229%</span>
+                            <span class="stat-label">Growth Rate</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">401</span>
+                            <span class="stat-label">Total Attendees</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Events Hosted</span>
+                        </div>
                     </div>
                 </div>
-                
+            </div>
+            
+            <div class="grid grid-cols-1 grid-cols-2-md grid-cols-3-lg">
+                <!-- DataTribe Meetup #5 -->
                 <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Breaking In Your Data Shoes" class="event-image">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DataTribe Meetup #5" class="event-image">
                     <div class="event-content">
-                        <div class="event-date">February 10, 2025</div>
-                        <h3 class="event-title">DataTribe LIVE: Breaking In Your Data Shoes</h3>
+                        <div class="event-date">September 9, 2025 • 4:30 PM</div>
+                        <h3 class="event-title">DataTribe Meetup #5 - Data Engineering and AI @ Wärtsilä</h3>
                         <p class="event-description">
-                            Career development session focused on transitioning into data & AI roles and building your professional brand.
+                            Patterns, Data Platforms & Practical AI. Technical deep-dives with Stephen Sullivan, J-P Vapaavuori, and Aarni Sillanpää.
                         </p>
-                        <a href="#" class="btn btn-secondary">View Recording</a>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <strong>Location:</strong> Wärtsilä, Helsinki
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Attendees:</strong> 125
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Partners:</strong> HelPy & PyData
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Event Recap</a>
+                    </div>
+                </div>
+
+
+
+                <!-- DataTribe Meetup #4 -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DataTribe Meetup #4" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">June 18, 2025 • 5:00 PM</div>
+                        <h3 class="event-title">DataTribe Meetup #4 - Data Engineering and AI @ Sevendos</h3>
+                        <p class="event-description">
+                            Practical Data & AI Insights for Engineers. Featuring Chandree Roy, Olli Salakari, and Antti Rask.
+                        </p>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <strong>Location:</strong> Sevendos, Helsinki
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Attendees:</strong> 101
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Duration:</strong> 4+ hours
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Event Recap</a>
+                    </div>
+                </div>
+
+                <!-- DataTribe Meetup #3 -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DataTribe Meetup #3" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">April 23, 2025 • 5:00 PM</div>
+                        <h3 class="event-title">DataTribe Meetup #3 - Data Engineering and AI</h3>
+                        <p class="event-description">
+                            Azure AI Foundry, Spatial Data Analytics, and Apache Iceberg. Technical sessions by Hemanth Gudela, Babak Firoozi Fooladi, and Chanukya Pekala.
+                        </p>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <strong>Location:</strong> Smartly Event Space, Helsinki
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Attendees:</strong> 65
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Duration:</strong> 3+ hours
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Event Recap</a>
+                    </div>
+                </div>
+
+                <!-- Breaking In Your Data Shoes -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Breaking In Your Data Shoes" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">March 19, 2025 • 5:30 PM</div>
+                        <h3 class="event-title">Breaking In Your Data Shoes 📊👟</h3>
+                        <p class="event-description">
+                            Career development panel for junior data specialists and career changers. Featuring Eevamaija Virtanen, Antti Rask, Stefan Heinrichs, and Rebekka Gotter.
+                        </p>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <strong>Location:</strong> Luckan Integration, Helsinki
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Attendees:</strong> 72
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Sponsors:</strong> Luckan Integration & Skillio
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Event Recap</a>
+                    </div>
+                </div>
+
+                <!-- DataTribe Meetup #1 -->
+                <div class="event-card">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DataTribe Meetup #1" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">November 28, 2024 • 4:00 PM</div>
+                        <h3 class="event-title">DataTribe Meetup #1 - Data Engineering</h3>
+                        <p class="event-description">
+                            Our first meetup featuring FinOps in Data and AI, Fabric Zero to Hero, and Introduction to Databricks Apps.
+                        </p>
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <strong>Location:</strong> Brightly Helsinki Office
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Attendees:</strong> 38
+                            </div>
+                            <div class="event-detail-item">
+                                <strong>Duration:</strong> 4+ hours
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Event Recap</a>
                     </div>
                 </div>
             </div>
@@ -257,7 +467,7 @@
                     Connect with data professionals, attend events, and advance your career in data & AI.
                 </p>
                 <div class="cta-actions">
-                    <button class="btn btn-primary btn-lg" onclick="openJoinForm()">Join Community</button>
+                    <a href="#" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
                     <a href="#events" class="btn btn-secondary btn-lg">View Events</a>
                 </div>
             </div>
