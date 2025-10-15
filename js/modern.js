@@ -40,9 +40,12 @@ class DataTribeApp {
           const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
           const targetPosition = targetElement.offsetTop - headerHeight - 20;
           
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'auto'
+          // Use requestAnimationFrame for smooth rendering without CSS transitions
+          requestAnimationFrame(() => {
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'auto'
+            });
           });
         }
       });
@@ -144,36 +147,85 @@ class DataTribeApp {
 
   // Form submission (placeholder for API integration)
   async submitForm(form) {
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
-    
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Validate required fields
-    const requiredFields = form.querySelectorAll('[required]');
-    for (const field of requiredFields) {
-      if (!field.value.trim()) {
-        throw new Error(`Field ${field.name} is required`);
+    try {
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      
+      // Clear previous errors
+      this.clearFormErrors(form);
+      
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Validate required fields
+      const requiredFields = form.querySelectorAll('[required]');
+      let hasErrors = false;
+      
+      for (const field of requiredFields) {
+        if (!field.value.trim()) {
+          this.showFieldError(field, `${field.name || field.placeholder || 'This field'} is required`);
+          hasErrors = true;
+        }
       }
-    }
-    
-    // Email validation
-    const emailFields = form.querySelectorAll('input[type="email"]');
-    for (const field of emailFields) {
-      if (field.value && !this.isValidEmail(field.value)) {
-        throw new Error('Please enter a valid email address');
+      
+      // Email validation
+      const emailFields = form.querySelectorAll('input[type="email"]');
+      for (const field of emailFields) {
+        if (field.value && !this.isValidEmail(field.value)) {
+          this.showFieldError(field, 'Please enter a valid email address');
+          hasErrors = true;
+        }
       }
+      
+      if (hasErrors) {
+        throw new Error('Please fix the form errors');
+      }
+      
+      console.log('Form data:', data);
+      return data;
+    } catch (error) {
+      console.error('Form submission error:', error);
+      throw error;
     }
-    
-    console.log('Form data:', data);
-    return data;
   }
 
   // Email validation
   isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+  }
+
+  // Show field error
+  showFieldError(field, message) {
+    field.classList.add('error');
+    field.setAttribute('aria-invalid', 'true');
+    
+    // Remove existing error message
+    const existingError = field.parentNode.querySelector('.field-error');
+    if (existingError) {
+      existingError.remove();
+    }
+    
+    // Add error message
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'field-error';
+    errorDiv.textContent = message;
+    errorDiv.setAttribute('role', 'alert');
+    errorDiv.style.cssText = 'color: var(--error); font-size: var(--text-sm); margin-top: var(--space-1);';
+    
+    field.parentNode.insertBefore(errorDiv, field.nextSibling);
+  }
+
+  // Clear form errors
+  clearFormErrors(form) {
+    const errorFields = form.querySelectorAll('.error');
+    errorFields.forEach(field => {
+      field.classList.remove('error');
+      field.removeAttribute('aria-invalid');
+    });
+    
+    const errorMessages = form.querySelectorAll('.field-error');
+    errorMessages.forEach(msg => msg.remove());
   }
 
   // Notification system
@@ -229,18 +281,26 @@ class DataTribeApp {
 
   // Preload critical resources
   preloadCriticalResources() {
-    const criticalResources = [
-      '/css/modern.css',
-      '/js/modern.js'
-    ];
+    try {
+      const criticalResources = [
+        '/css/modern.css',
+        '/js/modern.js'
+      ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
-    });
+      criticalResources.forEach(resource => {
+        try {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = resource;
+          link.as = resource.endsWith('.css') ? 'style' : 'script';
+          document.head.appendChild(link);
+        } catch (error) {
+          console.warn('Failed to preload resource:', resource, error);
+        }
+      });
+    } catch (error) {
+      console.error('Error preloading critical resources:', error);
+    }
   }
 
   // Performance logging
@@ -308,8 +368,7 @@ window.addEventListener('unhandledrejection', (event) => {
   // In production, send to error tracking service
 });
 
-// Initialize app when DOM is ready
-// Modal Functions
+// Modal Functions - Integrated with DataTribeApp
 function openJoinForm() {
     const modal = document.getElementById('joinModal');
     if (modal) {
@@ -405,8 +464,12 @@ function handleJoinForm(event) {
     }, 1500);
 }
 
-// Initialize join form when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+// Initialize app when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    new DataTribeApp();
+    
+    // Initialize join form
     const joinForm = document.getElementById('joinForm');
     if (joinForm) {
         joinForm.addEventListener('submit', handleJoinForm);
@@ -418,12 +481,22 @@ document.addEventListener('DOMContentLoaded', function() {
             closeJoinForm();
         }
     });
-});
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => new DataTribeApp());
+  });
 } else {
   new DataTribeApp();
+  
+  // Initialize join form
+  const joinForm = document.getElementById('joinForm');
+  if (joinForm) {
+      joinForm.addEventListener('submit', handleJoinForm);
+  }
+  
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+          closeJoinForm();
+      }
+  });
 }
 
 // Export for testing
