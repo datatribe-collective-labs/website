@@ -26,10 +26,11 @@
     
     <!-- Preload critical resources -->
     <link rel="preload" href="css/modern.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     <link rel="stylesheet" href="css/modern.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="css/modern.css"></noscript>
 </head>
@@ -41,6 +42,7 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <a href="/" class="logo" aria-label="DataTribe Collective Home">
+                <img src="DataTribe_logo_circle.png" alt="DataTribe Collective" class="logo-image">
                 <span class="logo-text">DataTribe</span>
                 <span class="logo-accent">Collective</span>
             </a>
@@ -52,7 +54,7 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <a href="#" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
+                <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
@@ -71,7 +73,7 @@
                 <p>Explore structured learning journeys designed to advance your data & AI expertise. Join our community-driven educational programs and accelerate your career in data & AI.</p>
                 <div class="hero-actions">
                     <a href="#learning-paths" class="btn btn-primary btn-lg">Explore Paths</a>
-                    <a href="#" class="btn btn-secondary btn-lg" target="_blank" rel="noopener" aria-describedby="discord-description">Join Community</a>
+                    <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-secondary btn-lg" target="_blank" rel="noopener" aria-describedby="discord-description">Join Community</a>
                 </div>
                 <div id="discord-description" class="sr-only">Join our Discord community to connect with other data professionals</div>
             </div>
@@ -206,7 +208,7 @@
                         Join our community and begin your structured learning path in data engineering and analytics. Connect with mentors, work on real projects, and advance your career.
                     </p>
                     <div class="cta-actions">
-                        <a href="#" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
+                        <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
                         <a href="events.html" class="btn btn-secondary btn-lg">View Events</a>
                     </div>
                 </div>
@@ -335,7 +337,7 @@
                     
                     <div class="form-actions">
                         <button type="button" class="btn btn-secondary" onclick="closeJoinForm()">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Join Community</button>
+                        <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary" target="_blank" rel="noopener">Join Community</a>
                     </div>
                 </form>
             </div>

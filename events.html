@@ -32,7 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="css/modern.css" as="style">
@@ -66,6 +68,7 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <a href="/" class="logo" aria-label="DataTribe Collective Home">
+                <img src="DataTribe_logo_circle.png" alt="DataTribe Collective" class="logo-image">
                 <span class="logo-text">DataTribe</span>
                 <span class="logo-accent">Collective</span>
             </a>
@@ -77,7 +80,7 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <a href="#" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
+                <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
@@ -114,7 +117,7 @@
             
             <div class="grid grid-cols-2 grid-cols-1-md">
                 <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data & AI Workshop" class="event-image">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data & AI Workshop" class="event-image" loading="lazy" decoding="async">
                     <div class="event-content">
                         <div class="event-date">March 15, 2025 • 6:00 PM</div>
                         <h3 class="event-title">Machine Learning Fundamentals Workshop</h3>
@@ -137,7 +140,7 @@
                 </div>
                 
                 <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Analytics Meetup" class="event-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Analytics Meetup" class="event-image" loading="lazy" decoding="async">
                     <div class="event-content">
                         <div class="event-date">March 22, 2025 • 7:00 PM</div>
                         <h3 class="event-title">Data Visualization Best Practices</h3>
@@ -160,7 +163,7 @@
                 </div>
                 
                 <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Science Networking" class="event-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data Science Networking" class="event-image" loading="lazy" decoding="async">
                     <div class="event-content">
                         <div class="event-date">March 29, 2025 • 6:30 PM</div>
                         <h3 class="event-title">Data & AI Networking Mixer</h3>
@@ -183,7 +186,7 @@
                 </div>
                 
                 <div class="event-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Python for Data Science" class="event-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Python for Data Science" class="event-image" loading="lazy" decoding="async">
                     <div class="event-content">
                         <div class="event-date">April 5, 2025 • 6:00 PM</div>
                         <h3 class="event-title">Python for Data Science Deep Dive</h3>
@@ -467,7 +470,7 @@
                     Connect with data professionals, attend events, and advance your career in data & AI.
                 </p>
                 <div class="cta-actions">
-                    <a href="#" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
+                    <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Join Community</a>
                     <a href="#events" class="btn btn-secondary btn-lg">View Events</a>
                 </div>
             </div>
@@ -492,8 +495,29 @@
                 </div>
                 
                 <div class="footer-section">
-
-
+                    <h3>Quick Links</h3>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="learning-paths.html">Learning Paths</a></p>
+                    <p><a href="events.html">Events</a></p>
+                    <p><a href="mentors.html">Mentorship</a></p>
+                    <p><a href="partners.html">Partnerships</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest events and community updates delivered to your inbox.</p>
+                    <form class="newsletter-form" aria-label="Newsletter signup">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address" style="min-width: 250px;">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DataTribe Collective. All rights reserved. <a href="/code-of-conduct">Code of Conduct</a> | Built with ❤️ for the data community.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Screen Reader Only -->
     <div class="sr-only" aria-live="polite" aria-atomic="true"></div>

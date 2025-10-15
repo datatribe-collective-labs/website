@@ -32,7 +32,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="css/modern.css" as="style">
@@ -65,6 +67,7 @@
     <header class="header" role="banner">
         <nav class="nav" role="navigation" aria-label="Main navigation">
             <a href="/" class="logo" aria-label="DataTribe Collective Home">
+                <img src="DataTribe_logo_circle.png" alt="DataTribe Collective" class="logo-image">
                 <span class="logo-text">DataTribe</span>
                 <span class="logo-accent">Collective</span>
             </a>
@@ -76,7 +79,7 @@
                         <li role="none"><a href="partners.html" class="nav-link" role="menuitem">Partners</a></li>
                     </ul>
             <div class="nav-actions">
-                <a href="#" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
+                <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Join Now</a>
                             </div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger-line"></span>
@@ -111,7 +114,7 @@
                 </p>
                                     </div>
 
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 grid-cols-2-md grid-cols-3-lg">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Give Back to the Community</h3>
@@ -264,7 +267,7 @@
                 </p>
                 </div>
 
-            <div class="grid grid-cols-3">
+            <div class="grid grid-cols-1 grid-cols-2-md grid-cols-3-lg">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">Sarah Chen</h3>
@@ -437,7 +440,7 @@
 
                     <div class="form-actions">
                         <button type="button" class="btn btn-secondary" onclick="closeJoinForm()">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Join Community</button>
+                        <a href="https://docs.google.com/forms/d/1xBuGZJ9CpLn15CnqmOl3NITkIGNStS1UNP3Gwa4mRb8" class="btn btn-primary" target="_blank" rel="noopener">Join Community</a>
                         </div>
                 </form>
                                     </div>
